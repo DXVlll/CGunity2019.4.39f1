@@ -17,7 +17,7 @@ public class CameraMotionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+    //    Cursor.lockState = CursorLockMode.Locked;
 
         //  directionFromRoboToCamera.SetLocalPositionAndRotation(roboPos, roboRot);
         var prevRoboPos = robotTransform.position;

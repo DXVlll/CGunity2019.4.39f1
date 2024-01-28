@@ -11,6 +11,9 @@ public class Camera2DMotionController : MonoBehaviour
     [SerializeField] float camSensVertical = 4f;
     [SerializeField] float camSensHorizontal = 4f;
     [SerializeField] float cameraDistance = 10f;
+    [SerializeField] float cameraDistanceMax = 12f;
+    [SerializeField] float cameraDistanceMin = 2f;
+    [SerializeField] float zoomSpeed = 7f;
   //  [SerializeField] float lookSpeed = 1f;
 
     Vector3 offset = new Vector3(0, 1, -10);
@@ -33,7 +36,7 @@ public class Camera2DMotionController : MonoBehaviour
 
         cameraTransform.position = robotTransform.position + offset*cameraDistance;
 
-    //    cameraTransform.LookAt(robotTransform);
+      //  cameraTransform.LookAt(robotTransform);
     }
 
     // Update is called once per frame
@@ -51,7 +54,14 @@ public class Camera2DMotionController : MonoBehaviour
                 offset.y = tmp.y;
             }
         }
-        UnityEngine.Debug.Log(offset);
+        float tmpDist = cameraDistance;
+        tmpDist += Input.GetAxis("Mouse ScrollWheel")*zoomSpeed;
+        if (tmpDist < cameraDistanceMax && tmpDist > cameraDistanceMin)
+        {
+            cameraDistance = tmpDist;
+        }
+
+       // UnityEngine.Debug.Log(offset);
         cameraTransform.position = robotTransform.position + offset * cameraDistance;
 
        // robotTransform.eulerAngles = new Vector3(robotTransform.eulerAngles.x + curpos.x, robotTransform.eulerAngles.y + curpos.y, 0);
@@ -59,7 +69,7 @@ public class Camera2DMotionController : MonoBehaviour
      //   newTempDirectionFromRoboPerspective = Vector3.ClampMagnitude(newTempDirectionFromRoboPerspective, 1);
 
     //    cameraTransform.position = prevRoboPos + 2*newTempDirectionFromRoboPerspective;
-    //    cameraTransform.LookAt(robotTransform);
+     //   cameraTransform.LookAt(robotTransform);
 
 
     //    lastMouse = Input.mousePosition;
