@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 3419869127306207464}
   - component: {fileID: 2018547382}
   - component: {fileID: 7560717202991402479}
-  - component: {fileID: 6478075861257313867}
+  - component: {fileID: 4308488608344006777}
   m_Layer: 0
   m_Name: boing 1
   m_TagString: Untagged
@@ -275,7 +275,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0.04, y: 0.36, z: 0}
---- !u!114 &6478075861257313867
+--- !u!114 &4308488608344006777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2572884747854381254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631da7572f25c43b493f996ffce59765, type: 3}
+  m_Script: {fileID: 11500000, guid: e10edb2ab05c4488c8c9f9a4d5bda54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 6
@@ -293,7 +293,7 @@ MonoBehaviour:
   gravity: 10
   lookSpeed: 2
   lookXLimit: 45
-  defaultHeight: 2
+  defaultHeight: 0
   crouchHeight: 1
   crouchSpeed: 3
 --- !u!1 &2917227793346173393

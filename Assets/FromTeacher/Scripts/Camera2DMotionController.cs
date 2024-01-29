@@ -29,7 +29,7 @@ public class Camera2DMotionController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
    //     Cursor.visible = false;
 
-        
+         UnityEngine.Debug.Log(robotTransform.position  +"- position;"+robotTransform.rotation +"rotation"); 
         
 
         offset = Vector3.ClampMagnitude(offset, 1);
@@ -63,6 +63,7 @@ public class Camera2DMotionController : MonoBehaviour
 
        // UnityEngine.Debug.Log(offset);
         cameraTransform.position = robotTransform.position + offset * cameraDistance;
+        
 
        // robotTransform.eulerAngles = new Vector3(robotTransform.eulerAngles.x + curpos.x, robotTransform.eulerAngles.y + curpos.y, 0);
       //  Vector3 newTempDirectionFromRoboPerspective = robotTransform.forward;
